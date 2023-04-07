@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Noto+Sans:wght@200;400&display=swap');
+
+:root {
+  --clr-background: #d9d1ba;
+  --clr-text: #131f26;
+  --clr-accent: #d9c196;
+  --clr-headline: #45788c;
+  --clr-link: #f26938;
+
+  --ff-headings: 'Noto Sans', sans-serif;
+  --ff-text: 'Crimson Text', serif;
+
+  --fw-light: 200;
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --fs-small: 0.875rem;
+  --fs-normal: 1.1rem;
+  --fs-large: 1.8rem;
+  --fs-xlarge: 2.8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--clr-background);
+  font-family: var(--ff-text);
+  font-size: var(--fs-normal);
+  color: var(--clr-text);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-headline);
+  font-family: var(--ff-headings);
+}
+
+h1 {
+  font-size: var(--fs-xlarge);
+  font-weight: var(--fw-light);
+}
+
+h2 {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-light);
+}
+
+h3 {
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-reg);
+}
+
+.small {
+  font-family: var(--ff-text);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+/* Utility classes */
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
