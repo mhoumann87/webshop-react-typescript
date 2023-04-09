@@ -10,16 +10,18 @@ const Footer = ({ viewCart }: PropsType) => {
   const year: number = new Date().getFullYear();
 
   const pageContent = viewCart ? (
-    <p>Shopping Cart &copy;{year}</p>
+    <p className='center'>Shopping Cart &copy;{year}</p>
   ) : (
     <>
-      <p>Total Items: {totalItems}</p>
-      <p>Total Price: {totalPrice}</p>
-      <p>Shopping Cart &copy;{year}</p>
+      <div>
+        <p>Total Items: {totalItems}</p>
+        <p>Total Price: {totalPrice}</p>
+      </div>
+      <h3>Shopping Cart &copy;{year}</h3>
     </>
   );
 
-  const content = <footer className='footer'>{pageContent}</footer>;
+  const content = <footer className='footer flex'>{pageContent}</footer>;
 
   return content;
 };
