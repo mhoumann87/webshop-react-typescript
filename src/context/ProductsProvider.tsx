@@ -44,11 +44,13 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
     const fetchProducts = async (): Promise<ProductType[]> => {
       const data = await fetch('http://localhost:3500/products')
         .then(res => {
+          console.log('Got Data');
           return res.json();
         })
         .catch(err => {
           if (err instanceof Error) console.log(err.message);
         });
+      console.log(data);
       return data;
     };
 
